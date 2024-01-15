@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&family=UnifrakturMaguntia&display=swap');
+
+* {
+    font-family: 'UnifrakturCook', cursive;
+    color: #FFF1D7;
+    background-color: #790C05;
+}
+
+.custom-hr {
+    border: 2px solid #DAA520;
+    opacity: 0.5;
+    margin: 0;
+}
+
+#generate-button {
+    background-color: #DAA520;
+    color: #790C05;
+}
+
+#generate-button:hover {
+    background-color: #FFF1D7;
+}
+
+.i {
+    color: #FFF1D7;
+}
+
+i:hover {
+    color: #DAA520;
+}
