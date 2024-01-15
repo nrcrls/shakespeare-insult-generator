@@ -38,6 +38,6 @@ function getRandomElement(array) {
 // Function to generate random adjectives to make insult
 function getAdjectives() {
     const randomAdjectives = insults.map(getRandomElement);
-    const insultPhrase = `Thou ${randomAdjectives.join(" ")}!`;
+    const insultPhrase = `"Thou ${randomAdjectives.join(" ")}!"`;
     return insultPhrase;
 };

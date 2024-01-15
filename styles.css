@@ -25,10 +25,10 @@
     background-color: #FFF1D7;
 }
 
-.i {
-    color: #FFF1D7;
+i {
+    color: #DAA520;
 }
 
 i:hover {
-    color: #DAA520;
+    color: #FFF1D7;
 }
