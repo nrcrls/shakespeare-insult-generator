@@ -17,15 +17,18 @@ let insults = [
 ];
 
 let generateButton = document.getElementById('generate-button');
+let copyButton = document.getElementById('copy-button');
+
+let insultDiv = document.getElementById('insult-container');
 
 generateButton.addEventListener('click', getRandomInsult);
+copyButton.addEventListener('click', copyToClipboard);
 
 function getRandomInsult() {
     // Generate an insult
     let insult = getAdjectives();
 
     // Display the insult in the div
-    let insultDiv = document.getElementById('insult-container');
     insultDiv.textContent = insult;
 }
 
@@ -41,3 +44,28 @@ function getAdjectives() {
     const insultPhrase = `"Thou ${randomAdjectives.join(" ")}!"`;
     return insultPhrase;
 };
+
+function copyToClipboard() {
+    // Get the text content from the insult container
+    let insultText = insultDiv.textContent;
+
+    /// Use the Clipboard API to write the text to the clipboard
+    navigator.clipboard.writeText(insultText)
+    .then(() => {
+        copyButton.textContent = 'Copied!';
+        copyButton.style.backgroundColor = '#FFF1D7';
+        setTimeout(() => {
+            copyButton.textContent = 'Copy';
+            copyButton.style.backgroundColor = '#DAA520'
+        }, 1500)
+    })
+    .catch((err) => {
+        showErrorMessage('Failed to copy to clipboard');
+    });
+}
+
+function showErrorMessage(message) {
+    alert(message);
+}
+
+getRandomInsult();

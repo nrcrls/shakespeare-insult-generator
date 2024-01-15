@@ -16,11 +16,13 @@
     margin: 0;
 }
 
+#copy-button,
 #generate-button {
     background-color: #DAA520;
     color: #790C05;
 }
 
+#copy-button:hover,
 #generate-button:hover {
     background-color: #FFF1D7;
 }
